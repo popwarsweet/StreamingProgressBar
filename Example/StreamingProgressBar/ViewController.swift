@@ -7,18 +7,42 @@
 //
 
 import UIKit
+import StreamingProgressBar
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var progressBar: StreamingProgressBar!
+    var playTimer: NSTimer?
+    var bufferTimer: NSTimer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        playTimer = NSTimer.scheduledTimerWithTimeInterval(
+            1/30,
+            target: self,
+            selector: #selector(incrementPlayTimer),
+            userInfo: nil,
+            repeats: true)
+        bufferTimer = NSTimer.scheduledTimerWithTimeInterval(
+            0.5,
+            target: self,
+            selector: #selector(incrementBufferProgress),
+            userInfo: nil,
+            repeats: true)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func incrementPlayTimer() {
+        let updatedProgress = progressBar.progress + 0.002
+        if updatedProgress > 1 {
+            progressBar.progress = 0
+            progressBar.secondaryProgress = 0
+        } else {
+            progressBar.progress = updatedProgress
+        }
     }
-
+    
+    func incrementBufferProgress() {
+        progressBar.secondaryProgress += 0.1
+    }
 }
 
