@@ -69,8 +69,7 @@ import UIKit
     private func commonInit() {
         self.layer.addSublayer(secondaryProgressBarLayer)
         self.layer.addSublayer(progressBarLayer)
-        layout(secondaryProgressBarLayer, forProgress: secondaryProgress)
-        layout(progressBarLayer,          forProgress: progress)
+        layoutProgressBars()
     }
     
     override init(frame: CGRect) {
@@ -81,5 +80,18 @@ import UIKit
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
+    }
+    
+    
+    // MARK: - Layout
+    
+    private func layoutProgressBars() {
+        layout(secondaryProgressBarLayer, forProgress: secondaryProgress)
+        layout(progressBarLayer,          forProgress: progress)
+    }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        layoutProgressBars()
     }
 }
