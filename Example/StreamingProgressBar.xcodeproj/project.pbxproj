@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3471F2291A51A6912F7AC8F6 /* Pods_StreamingProgressBar_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D85C9D62E7C513833F63479 /* Pods_StreamingProgressBar_Example.framework */; };
+		58C8BF5848E57CA6F260314A /* Pods_StreamingProgressBar_Example_StreamingProgressBar_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DD59A69363CC7AA29FF178E /* Pods_StreamingProgressBar_Example_StreamingProgressBar_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -28,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		032B6C2810EE817F4B985F4C /* Pods-StreamingProgressBar_Example-StreamingProgressBar_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingProgressBar_Example-StreamingProgressBar_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StreamingProgressBar_Example-StreamingProgressBar_Tests/Pods-StreamingProgressBar_Example-StreamingProgressBar_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		3DD59A69363CC7AA29FF178E /* Pods_StreamingProgressBar_Example_StreamingProgressBar_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StreamingProgressBar_Example_StreamingProgressBar_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A4EE08D4920CDFC26569336 /* Pods-StreamingProgressBar_Example-StreamingProgressBar_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingProgressBar_Example-StreamingProgressBar_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StreamingProgressBar_Example-StreamingProgressBar_Tests/Pods-StreamingProgressBar_Example-StreamingProgressBar_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5FF815E81F26C6FF6DFA5C47 /* Pods_StreamingProgressBar_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StreamingProgressBar_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* StreamingProgressBar_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreamingProgressBar_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E392A105B802BEF9AFEC8505 /* Pods_StreamingProgressBar_Tests.framework in Frameworks */,
+				58C8BF5848E57CA6F260314A /* Pods_StreamingProgressBar_Example_StreamingProgressBar_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,7 @@
 			children = (
 				8D85C9D62E7C513833F63479 /* Pods_StreamingProgressBar_Example.framework */,
 				5FF815E81F26C6FF6DFA5C47 /* Pods_StreamingProgressBar_Tests.framework */,
+				3DD59A69363CC7AA29FF178E /* Pods_StreamingProgressBar_Example_StreamingProgressBar_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -155,6 +161,8 @@
 				DE8C731D8C69B7E02F6D8422 /* Pods-StreamingProgressBar_Example.release.xcconfig */,
 				8D08FF2B3459A248219F239C /* Pods-StreamingProgressBar_Tests.debug.xcconfig */,
 				A2DB65521A8AEB728B29506D /* Pods-StreamingProgressBar_Tests.release.xcconfig */,
+				5A4EE08D4920CDFC26569336 /* Pods-StreamingProgressBar_Example-StreamingProgressBar_Tests.debug.xcconfig */,
+				032B6C2810EE817F4B985F4C /* Pods-StreamingProgressBar_Example-StreamingProgressBar_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -289,7 +297,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StreamingProgressBar_Tests/Pods-StreamingProgressBar_Tests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StreamingProgressBar_Example-StreamingProgressBar_Tests/Pods-StreamingProgressBar_Example-StreamingProgressBar_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		638304C1683FFF0543E99AB1 /* [CP] Check Pods Manifest.lock */ = {
@@ -319,7 +327,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StreamingProgressBar_Tests/Pods-StreamingProgressBar_Tests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StreamingProgressBar_Example-StreamingProgressBar_Tests/Pods-StreamingProgressBar_Example-StreamingProgressBar_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DB92D759C80EEDC36B682285 /* [CP] Copy Pods Resources */ = {
@@ -512,7 +520,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D08FF2B3459A248219F239C /* Pods-StreamingProgressBar_Tests.debug.xcconfig */;
+			baseConfigurationReference = 5A4EE08D4920CDFC26569336 /* Pods-StreamingProgressBar_Example-StreamingProgressBar_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -531,7 +539,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2DB65521A8AEB728B29506D /* Pods-StreamingProgressBar_Tests.release.xcconfig */;
+			baseConfigurationReference = 032B6C2810EE817F4B985F4C /* Pods-StreamingProgressBar_Example-StreamingProgressBar_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
