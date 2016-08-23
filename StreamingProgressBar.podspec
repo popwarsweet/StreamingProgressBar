@@ -25,7 +25,7 @@ A progress bar w/ a secondary bar, can be used for showing both play and buffer 
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Kyle Zaragoza' => 'popwarsweet@gmail.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/StreamingProgressBar.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/popwarsweet/StreamingProgressBar.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/KyleZaragoza'
 
   s.ios.deployment_target = '8.0'
