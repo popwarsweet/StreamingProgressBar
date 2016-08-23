@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'StreamingProgressBar_Example' do
+  pod 'StreamingProgressBar', :path => '../'
+
+  target 'StreamingProgressBar_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
