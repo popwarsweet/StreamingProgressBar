@@ -5,6 +5,9 @@
 [![License](https://img.shields.io/cocoapods/l/StreamingProgressBar.svg?style=flat)](http://cocoapods.org/pods/StreamingProgressBar)
 [![Platform](https://img.shields.io/cocoapods/p/StreamingProgressBar.svg?style=flat)](http://cocoapods.org/pods/StreamingProgressBar)
 
+## Demo
+<img src="https://github.com/popwarsweet/StreamingProgressBar/blob/master/demo.gif" width="600">
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
