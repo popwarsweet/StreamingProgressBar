@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'StreamingProgressBar'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'A progress bar w/ a secondary bar, can be used for showing both play and buffer progress in the same view.'
 
 # This description is used to generate tags and improve search results.
