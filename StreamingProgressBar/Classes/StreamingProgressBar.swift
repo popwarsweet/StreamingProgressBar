@@ -7,21 +7,21 @@
 
 import UIKit
 
-@IBDesignable public class StreamingProgressBar: UIView {
+@IBDesignable open class StreamingProgressBar: UIView {
     
-    @IBInspectable public var progressBarColor: UIColor = UIColor.whiteColor() {
+    @IBInspectable open var progressBarColor: UIColor = UIColor.white {
         didSet {
-            progressBarLayer.backgroundColor = progressBarColor.CGColor
+            progressBarLayer.backgroundColor = progressBarColor.cgColor
         }
     }
     
-    @IBInspectable public var secondaryProgressBarColor: UIColor = UIColor.clearColor() {
+    @IBInspectable open var secondaryProgressBarColor: UIColor = UIColor.clear {
         didSet {
-            secondaryProgressBarLayer.backgroundColor = secondaryProgressBarColor.CGColor
+            secondaryProgressBarLayer.backgroundColor = secondaryProgressBarColor.cgColor
         }
     }
     
-    @IBInspectable public var secondaryProgress: CGFloat = 0 {
+    @IBInspectable open var secondaryProgress: CGFloat = 0 {
         didSet {
             if secondaryProgress > 1 {
                 secondaryProgress = 1
@@ -32,7 +32,7 @@ import UIKit
         }
     }
 
-    @IBInspectable public var progress: CGFloat = 0.5 {
+    @IBInspectable open var progress: CGFloat = 0.5 {
         didSet {
             if progress > 1 {
                 progress = 1
@@ -43,12 +43,12 @@ import UIKit
         }
     }
     
-    private let progressBarLayer: CALayer = {
+    fileprivate let progressBarLayer: CALayer = {
         let layer = CALayer()
         return layer
     }()
     
-    private let secondaryProgressBarLayer: CALayer = {
+    fileprivate let secondaryProgressBarLayer: CALayer = {
         let layer = CALayer()
         return layer
     }()
@@ -56,7 +56,7 @@ import UIKit
     
     // MARK: - Layout
     
-    private func layout(layer: CALayer, forProgress progress: CGFloat) {
+    fileprivate func layout(_ layer: CALayer, forProgress progress: CGFloat) {
         let layerFrame = CGRect(
             origin: CGPoint.zero,
             size: CGSize(width: self.bounds.width * progress, height: self.bounds.height))
@@ -85,12 +85,12 @@ import UIKit
     
     // MARK: - Layout
     
-    private func layoutProgressBars() {
+    fileprivate func layoutProgressBars() {
         layout(secondaryProgressBarLayer, forProgress: secondaryProgress)
         layout(progressBarLayer,          forProgress: progress)
     }
     
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         layoutProgressBars()
     }

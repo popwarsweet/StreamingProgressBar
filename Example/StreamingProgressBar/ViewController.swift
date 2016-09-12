@@ -12,19 +12,19 @@ import StreamingProgressBar
 class ViewController: UIViewController {
 
     @IBOutlet weak var progressBar: StreamingProgressBar!
-    var playTimer: NSTimer?
-    var bufferTimer: NSTimer?
+    var playTimer: Timer?
+    var bufferTimer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        playTimer = NSTimer.scheduledTimerWithTimeInterval(
-            1/30,
+        playTimer = Timer.scheduledTimer(
+            timeInterval: 1/30,
             target: self,
             selector: #selector(incrementPlayTimer),
             userInfo: nil,
             repeats: true)
-        bufferTimer = NSTimer.scheduledTimerWithTimeInterval(
-            0.5,
+        bufferTimer = Timer.scheduledTimer(
+            timeInterval: 0.5,
             target: self,
             selector: #selector(incrementBufferProgress),
             userInfo: nil,
